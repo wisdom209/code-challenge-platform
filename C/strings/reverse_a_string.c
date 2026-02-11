@@ -33,8 +33,11 @@ int main() {
     // Reverse the string in-place
     reverseString(buffer);
 
-    // Print the reversed string followed by a newline
-    printf("%s\n", buffer);
-
+	// Print the reversed string
+	printf("%s", buffer);	
+	// Only add newline if the string is non‑empty
+	if (strlen(buffer) > 0) {
+    	printf("\n");
+	}
     return 0;
 }
