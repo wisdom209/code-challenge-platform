@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <stdio.h>
 
 /**
  * ft_print_comb2 - entry
@@ -7,22 +8,17 @@
  */
 void ft_print_comb2(void)
 {
-	char x, y, c, s;
+	int i, j;
 
-	c = ',';
-	s = ' ';
-
-	for (x = '0'; x <= '9'; x++)
+	for (i = 0; i < 100; i++)
 	{
-		for (y = '0'; y <= '9'; y++)
+		for (j = i + 1; j < 100; j++)
 		{
-			write(1, &x, 1);
-			write(1, &y, 1);
-			if (!((x == '9') && (y == '9')))
-			{
-				write(1, &c, 1);
-				write(1, &s, 1);
-			}
+			printf("%02d ", i);
+			if (!((i == 98) && (j == 99)))
+				printf("%02d,", j);
+			else
+				printf("%02d", j);
 		}
 	}
 }
