@@ -37,6 +37,7 @@ void ft_print_comb2(void)
 			{
 				num_to_string(j);
 				write(1, ",", 1);
+				write(1, " ", 1);
 			}
 			else
 				num_to_string(j);
