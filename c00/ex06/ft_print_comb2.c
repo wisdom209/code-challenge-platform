@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 /**
  * num_to_string - prints string format of number
@@ -11,8 +10,8 @@ void num_to_string(int num)
 {
 	char index_one, index_two;
 
-	index_one = (num / 10) + 48;
-	index_two = (num % 10) + 48;
+	index_one = (num / 10) + '0';
+	index_two = (num % 10) + '0';
 
 	write(1, &index_one, 1);
 	write(1, &index_two, 1);
