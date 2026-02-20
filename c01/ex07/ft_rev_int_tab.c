@@ -29,6 +29,9 @@ void ft_rev_int_tab(int *tab, int size)
 	half_size = size / 2;
 	j = size - 1;
 
-	for (i = 0; i <= half_size; i++)
-		swap(&tab[i], &tab[j--]);
+	for (i = 0; i < half_size; i++)
+	{
+		swap(&tab[i], &tab[j]);
+		j--;
+	}
 }
