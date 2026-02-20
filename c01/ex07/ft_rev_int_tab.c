@@ -24,7 +24,7 @@ void swap(int *a, int *b)
  */
 void ft_rev_int_tab(int *tab, int size)
 {
-	int i, j, k, half_size;
+	int i, j, half_size;
 
 	half_size = size / 2;
 	j = size - 1;
