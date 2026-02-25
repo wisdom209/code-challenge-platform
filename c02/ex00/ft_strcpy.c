@@ -13,5 +13,5 @@ char *ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 
 	dest[i] = '\0';
-	return dest;
+	return (dest);
 }
