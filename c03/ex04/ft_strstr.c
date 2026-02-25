@@ -47,10 +47,8 @@ int ft_strncmp(char *s1, char *s2, unsigned int n)
 char *ft_strstr(char *str, char *to_find)
 {
 	int to_find_len;
-	char *initial_str;
 
 	to_find_len = ft_strlen(to_find);
-	initial_str = str;
 
 	if (to_find[0] == '\0')
 		return (str);
