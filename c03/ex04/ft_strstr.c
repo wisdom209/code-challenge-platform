@@ -1,4 +1,6 @@
 
+#include <stdlib.h>
+
 /**
  * ft_strlen - string length
  * @str: string to count
@@ -65,5 +67,5 @@ char *ft_strstr(char *str, char *to_find)
 		str++;
 	}
 
-	return (NULL);
+	return (0);
 }
