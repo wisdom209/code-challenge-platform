@@ -16,7 +16,7 @@ void ft_putstr_non_printable(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] <= 32)
+		if (str[i] < 32)
 		{
 			write(1, "\\x", 3);
 			first = (int)str[i] / 16;
