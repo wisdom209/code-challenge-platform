@@ -28,12 +28,6 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 	i = 0;
 	src_size = ft_strlen(src);
 
-	if (size == 0)
-	{
-		dest[i] = '\0';
-		return (src_size);
-	}
-
 	for (i = 0; (i < size - 1 && i < src_size); i++)
 		dest[i] = src[i];
 
