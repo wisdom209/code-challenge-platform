@@ -30,7 +30,7 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 
 	if (size == 0)
 	{
-		dest[0] = '\0';
+		dest[i] = '\0';
 		return (src_size);
 	}
 
