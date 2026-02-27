@@ -14,8 +14,11 @@ char *ft_strcapitalize(char *str)
 	{
 		if (i > 0)
 		{
-			if ((str[i - 1] <= 32) && (str[i] >= 'a' && str[i] <= 'z'))
-				str[i] = str[i] - 32;
+			if (str[i - 1] <= 32 || str[i - 1] == 43 || str[i - 1] == 45)
+			{
+				if (str[i] >= 'a' && str[i] <= 'z')
+					str[i] = str[i] - 32;
+			}
 		}
 		else
 		{
