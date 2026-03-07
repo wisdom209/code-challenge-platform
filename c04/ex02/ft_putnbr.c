@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <limits.h>
 
 /**
  * ft_putnbr - writes a number to stdout
@@ -10,6 +11,12 @@ void ft_putnbr(int nb)
 {
 	int buffer[20], i, j;
 	char c;
+
+	if (nb == INT_MIN)
+	{
+		write(1, "-2147483648", 12);
+		return;
+	}
 
 	if (nb < 0)
 	{
