@@ -61,7 +61,7 @@ int ft_atoi(char *str)
 	for (i = 0; str[i] < '0' || str[i] > '9'; i++)
 	{
 		if (str[i] == '-')
-			isNeg = -1;
+			isNeg = -1 * isNeg;
 	}
 
 	for (i = 0; str[i] != '\0'; i++)
