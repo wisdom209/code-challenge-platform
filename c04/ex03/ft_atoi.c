@@ -75,9 +75,9 @@ int ft_atoi(char *str)
 		if (str[i] == '0' && (str[i + 1] < '0' || str[i + 1] > '9'))
 			return (0);
 
-		if (str[i + 1] >= '0' && str[i + 1] <= '9')
+		if (str[i] >= '0' && str[i] <= '9')
 		{
-			for (j = i + 1; str[j] > '0' && str[j] <= '9'; j++)
+			for (j = i; str[j] > '0' && str[j] <= '9'; j++)
 			{
 				buffer[k] = str[j];
 				k++;
