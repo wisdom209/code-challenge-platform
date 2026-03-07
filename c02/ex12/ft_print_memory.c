@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <stdio.h>
 
 /**
  * ft_rev_array - reverse array
@@ -55,34 +56,32 @@ void ft_print_address(unsigned long ptr, unsigned long ptr_size)
  * ft_print_hex - print the hex of address
  * @ptr_size: number
  * @addr: pointer
+ * @size: number
+ * @current_offset: number
  *
  * Return: void
  */
-void ft_print_hex(unsigned long ptr_size, void *addr)
+void ft_print_hex(unsigned long ptr_size, void *addr, unsigned int size,
+				  unsigned int current_offset)
 {
-	unsigned int i;
 	char *letters;
 	unsigned char *addr_str;
+	unsigned int i;
 
 	letters = "0123456789abcdef";
 	addr_str = (unsigned char *)addr;
 
 	for (i = 0; i < ptr_size; i++)
 	{
-		if (addr_str[i] == '\0')
+		if (current_offset + i < size)
 		{
-			while (i < ptr_size)
-			{
-				write(1, "   ", 3);
-				i++;
-			}
-			break;
+			write(1, &letters[addr_str[i] / 16], 1);
+			write(1, &letters[addr_str[i] % 16], 1);
+			write(1, " ", 1);
 		}
 		else
 		{
-			write(1, &letters[addr_str[i] / ptr_size], 1);
-			write(1, &letters[addr_str[i] % ptr_size], 1);
-			write(1, " ", 1);
+			write(1, "   ", 3);
 		}
 	}
 }
@@ -92,24 +91,29 @@ void ft_print_hex(unsigned long ptr_size, void *addr)
  * @offset: number - string offset
  * @ptr_size: size of pointer
  * @addr: address of string
+ * @size: number
  *
  * Return: void
  */
-void ft_print_memstr(unsigned int offset, unsigned long ptr_size, void *addr)
+void ft_print_memstr(unsigned int offset, unsigned long ptr_size,
+					 void *addr, unsigned int size)
 {
 	unsigned long i;
 	unsigned char *addr_str;
+	unsigned char c;
 
 	addr_str = (unsigned char *)addr;
 
 	for (i = 0; i < ptr_size; i++)
 	{
-		if (addr_str[offset + i] == '\0')
-			break;
-		if (addr_str[offset + i] < 32)
-			write(1, ".", 1);
-		else
-			write(1, &addr_str[offset + i], 1);
+		if (offset + i < size)
+		{
+			c = (unsigned char)addr_str[offset + i];
+			if (c < 32 || c > 127)
+				write(1, ".", 1);
+			else
+				write(1, &c, 1);
+		}
 	}
 }
 
@@ -126,16 +130,15 @@ void *ft_print_memory(void *addr, unsigned int size)
 	unsigned int i, string_offset;
 	unsigned long ptr, ptr_size;
 
-	ptr_size = sizeof(ptr) * 2;
-
-	for (i = 0; i <= size / ptr_size; i++)
+	ptr_size = 16;
+	for (i = 0; (i * ptr_size) < size; i++)
 	{
 		ptr = (unsigned long)addr + (ptr_size * i);
 		string_offset = ptr_size * i;
 
 		ft_print_address(ptr, ptr_size);
-		ft_print_hex(ptr_size, (char *)addr + (ptr_size * i));
-		ft_print_memstr(string_offset, ptr_size, addr);
+		ft_print_hex(ptr_size, (char *)addr + (ptr_size * i), size, ptr_size * i);
+		ft_print_memstr(string_offset, ptr_size, addr, size);
 
 		write(1, "\n", 1);
 	}
