@@ -68,6 +68,11 @@ void ft_putnbr_base(int nbr, char *base)
 			return;
 	}
 	i = 0;
+	if (newnbr == 0)
+	{
+		write(1, "0", 1);
+		return;
+	}
 	while (newnbr > 0)
 	{
 		buffer[i] = base[newnbr % base_len];
