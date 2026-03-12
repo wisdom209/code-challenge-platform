@@ -6,17 +6,18 @@
  */
 int ft_sqrt(int nb)
 {
-	int half_nb, i;
+	long half_nb, i, newnb;
 
-	if (nb < 1)
+	newnb = (long)nb;
+	if (newnb < 1)
 		return (0);
-	if (nb == 1)
+	if (newnb == 1)
 		return (1);
-	half_nb = nb / 2;
+	half_nb = newnb / 2;
 
 	for (i = 1; i <= half_nb; i++)
 	{
-		if (i * i == nb)
+		if (i * i == newnb)
 			return (i);
 	}
 	return (0);
