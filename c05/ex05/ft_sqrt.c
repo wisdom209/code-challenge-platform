@@ -10,9 +10,11 @@ int ft_sqrt(int nb)
 
 	if (nb < 1)
 		return (0);
+	if (nb == 1)
+		return (1);
 	half_nb = nb / 2;
 
-	for (i = 0; i <= half_nb; i++)
+	for (i = 1; i <= half_nb; i++)
 	{
 		if (i * i == nb)
 			return (i);
