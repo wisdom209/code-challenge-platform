@@ -12,7 +12,7 @@ int ft_sqrt(int nb)
 		return (0);
 	half_nb = nb / 2;
 
-	for (i = 0; i < half_nb; i++)
+	for (i = 0; i <= half_nb; i++)
 	{
 		if (i * i == nb)
 			return (i);
