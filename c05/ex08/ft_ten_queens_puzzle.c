@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 /**
  * abs - Get the absolute value of a number
@@ -54,10 +53,8 @@ int solve(int row, int nb, int *pos)
 	if (row == nb)
 	{
 		for (i = 0; i < nb; i++)
-		{
-			printf("%d", pos[i]);
-		}
-		printf("\n");
+			write(1, &pos[i], 1);
+		write(1, "\n", 1);
 		return (1);
 	}
 
