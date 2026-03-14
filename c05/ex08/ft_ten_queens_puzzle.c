@@ -27,7 +27,7 @@ int is_safe(int row, int col, int *pos)
 
 	for (r = 0; r < row; r++)
 	{
-		current_column = pos[row];
+		current_column = pos[r];
 
 		if (current_column == col)
 			return (0);
