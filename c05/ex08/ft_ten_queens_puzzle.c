@@ -49,11 +49,15 @@ int is_safe(int row, int col, int *pos)
 int solve(int row, int nb, int *pos)
 {
 	int count, col, i;
+	char c;
 
 	if (row == nb)
 	{
 		for (i = 0; i < nb; i++)
-			write(1, &pos[i], 1);
+		{
+			c = pos[i] + '0';
+			write(1, &c, 1);
+		}
 		write(1, "\n", 1);
 		return (1);
 	}
@@ -79,6 +83,6 @@ int ft_ten_queens_puzzle(void)
 {
 	int pos[10], count;
 
-	count = solve(0, 4, pos);
+	count = solve(0, 10, pos);
 	return (count);
 }
