@@ -16,11 +16,14 @@ int ft_ultimate_range(int **range, int min, int max)
 
 	if (max - min <= 0)
 	{
-		range = NULL;
+		*range = NULL;
 		return (-1);
 	}
 
 	int_array = malloc(sizeof(int) * (max - min));
+
+	if (!int_array)
+		return (-1);
 
 	for (i = 0; i < (max - min); i++)
 		int_array[i] = min + i;
