@@ -27,7 +27,7 @@ int ft_strlen(char *str)
  */
 char *ft_strjoin(int size, char **strs, char *sep)
 {
-	int i, j, k, l;
+	int i, j, k;
 	char *new_str;
 
 	new_str = malloc(1);
