@@ -46,7 +46,7 @@ int ft_strcmp(char *a, char *b)
 int main(int argc, char **argv)
 {
 	int i, j, buffer_len;
-	char *buffer[1024];
+	char *buffer[1024], *str;
 
 	if (argc < 2)
 		return (0);
@@ -67,7 +67,14 @@ int main(int argc, char **argv)
 	}
 
 	for (i = 0; i < argc - 1; i++)
-		printf("%s\n", buffer[i]);
+	{
+		str = buffer[i];
+		for (j = 0; str[j] != '\0'; j++)
+		{
+			write(1, &str[j], 1);
+			write(1, "\n", 1);
+		}
+	}
 
 	return (0);
 }
