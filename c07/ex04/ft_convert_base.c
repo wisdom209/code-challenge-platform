@@ -4,11 +4,11 @@
  *
  * @str: base string
  *
- * Return: int
+ * Return: long
  */
-int base_is_valid(char *str)
+long base_is_valid(char *str)
 {
-	int i, j, str_len;
+	long i, j, str_len;
 
 	for (str_len = 0; str[str_len] != '\0'; str_len++)
 		;
@@ -36,11 +36,11 @@ int base_is_valid(char *str)
  * @c: char
  * @str: str
  *
- * Return: index
+ * Return: long
  */
-int get_index(char c, char *str)
+long get_index(char c, char *str)
 {
-	int i;
+	long i;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -51,15 +51,15 @@ int get_index(char c, char *str)
 }
 
 /**
- * ft_atoi - convert nbr to base 10 integer
+ * ft_atoi - convert nbr to base 10  long number
  * @nbr: number string
  * @base_from: base from
  *
- * Return: int
+ * Return: long
  */
-int ft_atoi(char *nbr, char *base_from)
+long ft_atoi(char *nbr, char *base_from)
 {
-	int result, sign, index, base_len;
+	long result, sign, index, base_len;
 
 	sign = 1;
 	result = 0;
@@ -93,7 +93,7 @@ int ft_atoi(char *nbr, char *base_from)
  *
  * Return: base string
  */
-char *ft_tobase(int nbr, char *base_to, long isNeg)
+char *ft_tobase(long nbr, char *base_to, long isNeg)
 {
 	long base_len, i, tmp, new_nbr;
 	char *buffer;
