@@ -62,6 +62,7 @@ int ft_atoi(char *nbr, char *base_from)
 	int result, sign, index, base_len;
 
 	sign = 1;
+	result = 0;
 	for (base_len = 0; base_from[base_len] != '\0'; base_len++)
 		;
 
