@@ -141,7 +141,7 @@ char *ft_tobase(int nbr, char *base_to, long isNeg)
  */
 char *ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
-	int decimal, isNeg;
+	long decimal, isNeg;
 	char *base_convert;
 
 	isNeg = 0;
