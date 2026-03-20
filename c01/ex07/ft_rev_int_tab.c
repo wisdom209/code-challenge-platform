@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 00:44:11 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/21 00:53:32 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/21 00:55:06 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_rev_int_tab(int *tab, int size)
 
 	i = 0;
 	half_tab_size = size / 2;
-	while (i <= half_tab_size)
+	while (i < half_tab_size)
 	{
 		tmp = tab[i];
 		tab[i] = tab[size - i - 1];
