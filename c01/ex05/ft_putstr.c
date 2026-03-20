@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 00:35:34 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/21 00:38:12 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/21 00:38:41 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -26,5 +26,6 @@ void	ft_putstr(char *str)
 	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);
+		i++;
 	}
 }
