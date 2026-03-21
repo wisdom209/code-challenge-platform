@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 13:11:57 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/21 13:27:41 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/21 13:32:06 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -15,6 +15,7 @@
  * ft_putstr_non_printable - Displays a string,
  * replacing non‑printable characters
  * by \xhh (hexadecimal, lowercase).
+ * Note that space is asssumed printable
  *
  * @str: string of characters
  *
@@ -31,7 +32,7 @@ void	ft_putstr_non_printable(char *str)
 	hexadecimal_chars = "0123456789abcdef";
 	while (str[i])
 	{
-		if (str[i] <= 32 || str[i] == 127)
+		if (str[i] < 32 || str[i] == 127)
 		{
 			first_index = hexadecimal_chars[str[i] / 16];
 			second_index = hexadecimal_chars[str[i] % 16];
