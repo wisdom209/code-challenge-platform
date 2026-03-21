@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 12:37:29 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/21 12:50:27 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/21 12:56:41 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
  */
 int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	src_len;
+	int	i;
+	int	src_len;
 
 	src_len = 0;
 	while (src[src_len])
