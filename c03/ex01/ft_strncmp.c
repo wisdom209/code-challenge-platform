@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 04:57:25 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/22 05:02:55 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/22 05:08:15 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		else
 			break ;
 	}
+	if (i == n)
+		return (0);
 	return (s1[i] - s2[i]);
 }
