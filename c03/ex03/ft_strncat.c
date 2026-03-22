@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 05:19:11 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/22 05:23:31 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/22 05:24:07 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	j = 0;
 	while (dest[i])
 		i++;
-	while (src[j] && j < n)
+	while (src[j] && j < nb)
 	{
 		dest[i] = src[j];
 		j++;
