@@ -6,13 +6,13 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 05:26:40 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/22 05:48:41 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/22 05:49:26 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
  * ft_is_substr - confirms substring in a string
  * @str: string of characters
- * @substring: string of characters
+ * @substr: string of characters
  *
  * Return: int
  */
