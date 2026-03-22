@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 13:58:27 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/22 04:29:56 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/22 04:32:23 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -115,12 +115,12 @@ void	ft_show_printables(void *addr, unsigned int index, unsigned int size)
  *
  * Return: memory address
  */
-void	ft_print_memory(void *addr, unsigned int size)
+void	*ft_print_memory(void *addr, unsigned int size)
 {
 	unsigned int	i;
 
 	if (size <= 0)
-		return ;
+		return (addr);
 	i = 0;
 	while (i < size)
 	{
