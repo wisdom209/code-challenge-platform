@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 13:58:27 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/22 04:26:42 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/22 04:29:56 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -130,4 +130,5 @@ void	ft_print_memory(void *addr, unsigned int size)
 		write(1, "\n", 1);
 		i += 16;
 	}
+	return (addr);
 }
