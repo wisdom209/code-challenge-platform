@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 05:13:44 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/22 05:16:32 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/22 05:17:10 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
  *
  * Return: destination string
  */
-char	ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
 	int	j;
