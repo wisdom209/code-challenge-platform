@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 05:26:40 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/22 05:53:16 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/22 05:56:07 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -43,6 +43,8 @@ int	ft_is_substr(char *str, char *substr)
  */
 char	*ft_strstr(char *str, char *to_find)
 {
+	if (*to_find == '\0')
+		return (0);
 	while (*str)
 	{
 		if (ft_is_substr(str, to_find) == 1)
