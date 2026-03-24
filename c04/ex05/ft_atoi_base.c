@@ -6,9 +6,10 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 19:08:05 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/24 19:56:27 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/24 20:07:03 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /**
  * ft_str_contains - check str contains char
  * @c: characters
@@ -49,6 +50,38 @@ int	ft_strlen(char *str)
 }
 
 /**
+ * ft_is_valid_base - is given base valid
+ * @str: base
+ *
+ * Return: 1 if valid else 0
+ */
+int	ft_is_valid_base(char *str)
+{
+	int	i;
+	int	j;
+	int	str_len;
+
+	str_len = ft_strlen(str);
+	if (str_len <= 1)
+		return (0);
+	i = 0;
+	while (i < str_len)
+	{
+		if (str[i] == '-' || str[i] == '+')
+			return (0);
+		j = i + 1;
+		while (j < str_len)
+		{
+			if (str[i] == str[j])
+				return (0);
+			j++;
+		}
+		i++;
+	}
+	return (1);
+}
+
+/**
  * ft_atoi_base - converts string to int representation
  * @str: string of characters
  * @base: base
@@ -61,6 +94,8 @@ int	ft_atoi_base(char *str, char *base)
 	int	result;
 	int	base_len;
 
+	if (ft_is_valid_base(base) == 0)
+		return (0);
 	base_len = ft_strlen(base);
 	is_neg = 1;
 	while (*str && *str == ' ')
