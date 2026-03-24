@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 17:14:51 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/24 18:37:49 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/24 18:41:30 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	char	buffer[1024];
 
 	long_nbr = (long)nbr;
+	is_neg = 0;
 	if (long_nbr < 0)
 	{
 		is_neg = 1;
