@@ -6,13 +6,13 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 14:12:28 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/24 15:19:46 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/24 16:52:51 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
 /**
- * @ft_putnbr - Display a number
+ * ft_putnbr - Display a number
  * @nb: number
  *
  * Return: void
