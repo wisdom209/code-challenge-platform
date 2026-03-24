@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 22:06:08 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/24 22:12:32 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/24 22:13:35 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ int	ft_is_prime(int nbr)
 {
 	int	i;
 
-	if (nb <= 1)
+	if (nbr <= 1)
 		return (0);
 	i = 2;
-	while (i * i <= nb)
+	while (i * i <= nbr)
 	{
-		if (nb % i == 0)
+		if (nbr % i == 0)
 			return (0);
 		i++;
 	}
