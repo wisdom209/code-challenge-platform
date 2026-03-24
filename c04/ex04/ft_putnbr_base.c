@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 17:14:51 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/24 18:41:30 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/24 18:48:44 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	is_valid_base(char *base)
 	if (base_len <= 1)
 		return (0);
 	i = 0;
-	while (i++ < base_len)
+	while (i < base_len)
 	{
 		if (base[i] == '+' || base[i] == '-')
 			return (0);
