@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 19:08:05 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/24 20:07:03 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/24 20:11:49 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	ft_is_valid_base(char *str)
 	i = 0;
 	while (i < str_len)
 	{
-		if (str[i] == '-' || str[i] == '+')
+		if (str[i] == '-' || str[i] == '+' || str[i] == ' ')
 			return (0);
 		j = i + 1;
 		while (j < str_len)
