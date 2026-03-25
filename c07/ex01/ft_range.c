@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 06:06:39 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/25 06:18:43 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/25 06:20:49 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ int	*ft_range(int min, int max)
 	int	*range;
 	int	i;
 
-	if (min - max <= 0)
-		return (NULL);
 	range = malloc(max - min);
 	if (!range)
 		return (NULL);
