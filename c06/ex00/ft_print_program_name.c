@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 04:43:45 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/25 04:49:53 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/25 04:51:02 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(int argc, char **argv)
 {
 	int	i;
 
+	(void)argc;
 	i = 0;
 	while (argv[0][i])
 	{
