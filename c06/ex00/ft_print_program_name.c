@@ -6,14 +6,14 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 04:43:45 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/25 04:48:51 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/25 04:49:53 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 /**
- * ft_print_program_name - display name of program
+ * main - display name of program
  * @argc: number of command line arguments plus program name
  * @argv: program name and command line argument array
  *
