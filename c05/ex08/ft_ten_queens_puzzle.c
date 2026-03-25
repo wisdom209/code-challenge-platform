@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 03:17:49 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/25 04:37:43 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/25 04:38:46 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,9 +112,9 @@ int	ft_solve(int row, int *pos, int n)
  */
 int	ft_ten_queens_puzzle(void)
 {
-	int	pos[4];
+	int	pos[10];
 	int	count;
 
-	count = ft_solve(0, pos, 4);
+	count = ft_solve(0, pos, 10);
 	return (count);
 }
