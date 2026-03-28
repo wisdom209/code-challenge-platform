@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/28 14:44:48 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/28 18:10:26 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/28 18:15:39 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ long	ft_atoi(char *nbr, char *base)
 	long	char_index;
 
 	sign = 1;
-	while (*nbr < 32)
+	while (*nbr <= 32)
 		nbr++;
 	while (*nbr == '-' || *nbr == '+')
 	{
