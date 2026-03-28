@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/28 14:44:48 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/28 18:15:39 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/28 19:46:02 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ long	ft_str_contains_char(char c, char *str)
  *
  * Return: valid integer
  */
-long	ft_atoi(char *nbr, char *base)
+int	ft_atoi(char *nbr, char *base)
 {
 	long	result;
 	long	sign;
@@ -97,7 +97,7 @@ long	ft_atoi(char *nbr, char *base)
 		result = (result * get_base_len(base)) + char_index;
 		nbr++;
 	}
-	return (result * sign);
+	return (int)(result * sign);
 }
 
 /**
