@@ -6,12 +6,11 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/28 14:44:48 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/28 17:58:01 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/28 18:10:26 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * get_base_len - finds the length of base if valid
@@ -95,7 +94,7 @@ long	ft_atoi(char *nbr, char *base)
 		char_index = ft_str_contains_char(*nbr, base);
 		if (char_index < 0)
 			break ;
-		result = (result * 10) + char_index;
+		result = (result * get_base_len(base)) + char_index;
 		nbr++;
 	}
 	return (result * sign);
