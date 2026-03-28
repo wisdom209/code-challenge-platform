@@ -6,12 +6,11 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/28 20:10:43 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/28 22:18:13 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/28 22:26:46 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * ft_str_contains_char - confirm a charactere is part
