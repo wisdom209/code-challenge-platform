@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/28 14:44:48 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/28 19:46:02 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/28 19:47:05 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ int	ft_atoi(char *nbr, char *base)
 		result = (result * get_base_len(base)) + char_index;
 		nbr++;
 	}
-	return (int)(result * sign);
+	return ((int)(result * sign));
 }
 
 /**
