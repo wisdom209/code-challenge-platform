@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/28 12:55:41 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/28 13:07:14 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/28 13:24:43 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ int	ft_ultimate_range(int **range, int min, int max)
 {
 	int	i;
 	int	*buffer;
+	int	size;
 
+	size = max - min;
 	if (min >= max)
 	{
 		*range = NULL;
@@ -47,5 +49,5 @@ int	ft_ultimate_range(int **range, int min, int max)
 		i++;
 	}
 	*range = buffer;
-	return (max - min);
+	return (size);
 }
