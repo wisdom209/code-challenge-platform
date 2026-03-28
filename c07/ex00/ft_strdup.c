@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 05:58:20 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/25 06:17:43 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/28 12:37:35 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -28,7 +28,7 @@ char	*ft_strdup(char *src)
 		src_len++;
 	dup_str = malloc(sizeof(char) * src_len + 1);
 	if (dup_str == NULL)
-	  return (NULL);
+		return (NULL);
 	i = 0;
 	while (i < src_len)
 	{
