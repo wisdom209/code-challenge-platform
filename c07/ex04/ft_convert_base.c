@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/28 14:44:48 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/28 17:50:35 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/28 17:58:01 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
  *
  * Return: base_length if valid, else -1
  */
-int	get_base_len(char *base)
+long	get_base_len(char *base)
 {
-	int	base_len;
-	int	i;
+	long	base_len;
+	long	i;
 
 	base_len = 0;
 	i = 0;
@@ -53,9 +53,9 @@ int	get_base_len(char *base)
  *
  * Return: index of char else -1;
  */
-int	ft_str_contains_char(char c, char *str)
+long	ft_str_contains_char(char c, char *str)
 {
-	int	i;
+	long	i;
 
 	i = 0;
 	while (str[i])
@@ -74,11 +74,11 @@ int	ft_str_contains_char(char c, char *str)
  *
  * Return: valid integer
  */
-int	ft_atoi(char *nbr, char *base)
+long	ft_atoi(char *nbr, char *base)
 {
-	int	result;
-	int	sign;
-	int	char_index;
+	long	result;
+	long	sign;
+	long	char_index;
 
 	sign = 1;
 	while (*nbr < 32)
@@ -109,11 +109,11 @@ int	ft_atoi(char *nbr, char *base)
  *
  * Return: base representation of nbr in base_to
  */
-char	*ft_itoa(int nbr, char *base_to, int is_neg)
+char	*ft_itoa(long nbr, char *base_to, long is_neg)
 {
 	char	buffer[1024];
 	char	*int_repr;
-	int		i;
+	long	i;
 
 	i = 0;
 	if (nbr == 0)
@@ -145,9 +145,9 @@ char	*ft_itoa(int nbr, char *base_to, int is_neg)
  */
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
-	int		nbr_to_int;
+	long	nbr_to_int;
 	char	*base_conversion;
-	int		is_neg;
+	long	is_neg;
 
 	if (get_base_len(base_from) < 0 || get_base_len(base_to) < 0)
 		return (NULL);
