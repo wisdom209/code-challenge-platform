@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/29 06:02:40 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/29 06:40:14 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/29 06:41:10 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_BOOLEAN_H
 
 # include <unistd.h>
+# include <stdlib.h>
 
 # define TRUE 1
 
