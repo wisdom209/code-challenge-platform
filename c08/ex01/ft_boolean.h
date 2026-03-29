@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/29 06:02:40 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/29 06:36:06 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/29 06:40:14 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@
 
 # define SUCCESS 0
 
-static inline int	even(int nbr)
+# define EVEN is_even
+
+static inline int	is_even(int nbr)
 {
 	if (nbr % 2 == 0)
 		return (1);
