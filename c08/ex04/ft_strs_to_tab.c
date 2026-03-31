@@ -1,0 +1,90 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/31 22:28:08 by wisdom            #+#    #+#             */
+/*   Updated: 2026/03/31 23:04:09 by wisdom           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/**
+ * ft_strcpy - gets a copy of a string
+ * @str: string
+ *
+ * Return: pointer to new string
+ */
+#include <stdlib.h>
+#include "ft_strs_to_tab.h"
+
+/**
+ * ft_strlen - get string length
+ * @str: string
+ *
+ * Return: int
+ */
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+/**
+ * ft_strcpy - copy str to dest buffer
+ * @str: source string
+ * @dest: destination buffer
+ *
+ * Return: destination
+ */
+char	*ft_strcpy(char *dest, char *str)
+{
+	int		i;
+
+	i = 0;
+	while (str[i])
+	{
+		dest[i] = str[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+/**
+ * ft_strs_to_tab - strings to struct array
+ * @ac: array count
+ * @av: array of strings
+ *
+ * Return: struct array
+ */
+struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
+{
+	int				i;
+	char			buffer[1024];
+	t_stock_str		*stock_array;
+	t_stock_str		t_stock_str;
+
+	i = 0;
+	if (ac <= 0)
+		return (NULL);
+	stock_array = malloc(sizeof(t_stock_str) * ac);
+	if (!stock_array)
+		return (NULL);
+	while (i < ac)
+	{
+		t_stock_str.str = av[i];
+		t_stock_str.copy = ft_strcpy(buffer, av[i]);
+		t_stock_str.size = ft_strlen(av[i]);
+		stock_array[i] = t_stock_str;
+		i++;
+	}
+	t_stock_str.str = 0;
+	stock_array[i] = t_stock_str;
+	return (stock_array);
+}
