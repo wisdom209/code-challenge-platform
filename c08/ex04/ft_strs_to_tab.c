@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 22:28:08 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/31 23:07:51 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/31 23:20:05 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ char	*ft_strcpy(char *dest, char *str)
 {
 	int		i;
 
+	dest = malloc(sizeof(char) * ft_strlen(str));
+	if (!dest)
+		return (NULL);
 	i = 0;
 	while (str[i])
 	{
@@ -60,14 +63,14 @@ char	*ft_strcpy(char *dest, char *str)
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
 	int				i;
-	char			buffer[1024];
+	char			*buffer;
 	t_stock_str		*stock_array;
 	t_stock_str		t_stock_str;
 
 	i = 0;
 	if (ac <= 0)
 		return (NULL);
-	stock_array = malloc(sizeof(t_stock_str) * ac);
+	stock_array = malloc(sizeof(t_stock_str) * (ac + 1));
 	if (!stock_array)
 		return (NULL);
 	while (i < ac)
