@@ -6,21 +6,15 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 22:28:08 by wisdom            #+#    #+#             */
-/*   Updated: 2026/03/31 23:04:09 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/03/31 23:07:51 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * ft_strcpy - gets a copy of a string
- * @str: string
- *
- * Return: pointer to new string
- */
 #include <stdlib.h>
 #include "ft_strs_to_tab.h"
 
 /**
- * ft_strlen - get string length
+ * ft_strlen - Get string length
  * @str: string
  *
  * Return: int
