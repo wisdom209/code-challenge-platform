@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 22:28:08 by wisdom            #+#    #+#             */
-/*   Updated: 2026/04/01 05:20:39 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/04/01 05:22:07 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	t_stock_str		t_stock_str;
 
 	i = 0;
+	buffer = NULL;
 	if (ac <= 0)
 		return (NULL);
 	stock_array = malloc(sizeof(t_stock_str) * (ac + 1));
