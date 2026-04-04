@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 18:48:49 by wisdom            #+#    #+#             */
-/*   Updated: 2026/04/04 19:13:57 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/04/04 19:34:38 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ char	*ft_get_word(char *str, int start, int end)
 
 	i = 0;
 	word = malloc(sizeof(char) * (end - start + 1));
+	if (!word)
+		return (NULL);
 	i = 0;
 	while (start < end)
 	{
@@ -108,12 +110,12 @@ char	**ft_split(char *str, char *charset)
 	word_index = 0;
 	while (str[i])
 	{
-		if (is_sep(str[i], charset) >= 0)
+		if (str[i] && is_sep(str[i], charset) >= 0)
 			i++;
 		else
 		{
 			start = i;
-			while (is_sep(str[i], charset) < 0)
+			while (str[i] && is_sep(str[i], charset) < 0)
 				i++;
 			split[word_index++] = ft_get_word(str, start, i);
 		}
