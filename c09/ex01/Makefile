@@ -9,7 +9,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-%.o: %.c
+%.o: %.c includes/ft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
