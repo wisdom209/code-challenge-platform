@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 05:10:25 by wisdom            #+#    #+#             */
-/*   Updated: 2026/04/05 05:43:13 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/04/05 06:08:26 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ int	main(int argc, char **argv)
 	int		fd;
 
 	if (argc < 2)
-		return (write(1, "File name missing\n", 18), -1);
+		return (write(1, "File name missing.\n", 19), -1);
 	if (argc > 2)
-		return (write(1, "Too many arguments\n", 19), -1);
+		return (write(1, "Too many arguments.\n", 20), -1);
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
-		return (write(1, "Cannot read file\n", 17), -1);
+		return (write(1, "Cannot read file.\n", 18) -1);
 	while (read(fd, &c, 1) > 0)
 		write(1, &c, 1);
 	close(fd);
