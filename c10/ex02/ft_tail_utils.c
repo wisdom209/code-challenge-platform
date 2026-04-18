@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 18:02:04 by wisdom            #+#    #+#             */
-/*   Updated: 2026/04/14 19:25:09 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/04/18 20:16:27 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_tail.h"
@@ -166,9 +166,9 @@ int	ft_tail_bytes(int count, char **fs, int of)
 		counts[1] = count;
 		ft_c_print(buffer, counts, fs, of);
 		close(fd);
+		of++;
 		if (!fs[of])
 			break ;
-		of++;
 	}
 	return (free(buffer), 0);
 }

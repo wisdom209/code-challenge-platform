@@ -6,7 +6,7 @@
 /*   By: wisdom <ononiwuwisdom@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 18:04:14 by wisdom            #+#    #+#             */
-/*   Updated: 2026/04/14 19:31:34 by wisdom           ###   ########.fr       */
+/*   Updated: 2026/04/18 19:51:01 by wisdom           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <errno.h>
 # include <fcntl.h>
+# include <stdio.h>
 
 void	ft_putstr(char *str, int des, int flag);
 int		ft_getnb(char *str, int *errored);
